@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: stg_nfl_salaries_2023
-    description: "Staging model for NFL player salaries in 2023 season."
+  - name: stg_nfl_salaries_2024
+    description: "Staging model for NFL player salaries in 2024 season."
     columns:
       - name: PLAYER_NAME
         tests:
