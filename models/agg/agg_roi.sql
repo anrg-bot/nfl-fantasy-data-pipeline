@@ -7,9 +7,9 @@ WITH roi AS (
         p.FANTASY_POINTS,
         s.SALARY
     FROM
-        {{ ref('fact_player_stats') }} p
+        {{ ref('fct_player_stats') }} p
     JOIN
-        {{ ref('fact_salaries') }} s
+        {{ ref('fct_salaries') }} s
     ON
         p.PLAYER_ID = s.PLAYER_ID
     JOIN {{ ref('dim_players') }} d

@@ -6,7 +6,7 @@ WITH touchdown_rate AS (
             ELSE SUM(PASSING_TDS + RUSHING_TDS + RECEIVING_TDS) * 1.0 / SUM(ATTEMPTS + CARRIES + TARGETS) 
         END AS TOUCHDOWN_RATE
     FROM
-        {{ ref('fact_player_stats') }}
+        {{ ref('fct_player_stats') }}
     GROUP BY
         1
 )
