@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: fact_player_stats
+  - name: fct_player_stats
     description: "Fact table containing player statistics for each game."
     columns:
       - name: PLAYER_ID
@@ -47,7 +47,7 @@ models:
               type: sum
       
 
-  - name: fact_red_zone
+  - name: fct_red_zone
     description: "Fact table containing red zone statistics for players in each game."
     columns:
       - name: PLAYER_ID
@@ -61,7 +61,7 @@ models:
       - name: RED_ZONE_TDS
         description: "Number of red zone touchdowns."
 
-  - name: fact_injuries
+  - name: fct_injuries
     description: "Fact table containing injury information for players."
     columns:
       - name: TEAM
@@ -83,7 +83,7 @@ models:
             total_injury:
               type: count
 
-  - name: fact_salaries
+  - name: fct_salaries
     description: "Fact table containing player salaries for each season."
     columns:
       - name: PLAYER_ID
