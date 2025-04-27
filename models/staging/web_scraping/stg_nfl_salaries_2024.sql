@@ -4,7 +4,7 @@ WITH nfl_salaries AS (
         TEAM,
         SALARY
     FROM
-        {{ source('web_scraping', 'NFL_SALARIES_2023') }}
+        {{ source('web_scraping', 'NFL_SALARIES_2024') }}
 )
 SELECT
     *

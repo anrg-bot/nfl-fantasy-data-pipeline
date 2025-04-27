@@ -2,11 +2,11 @@ version: 2
 
 sources:
   - name: web_scraping
-    database: RAMYASHREESHETTY85PLR_ANALYTICS
-    schema: STAGING
+    database: NFL_DATA_LAB
+    schema: RAW_NFL
     tables:
-      - name: NFL_SALARIES_2023
-        description: "Salaries of NFL players for the 2023 season, scraped from Spotrac."
+      - name: SALARIES_2024
+        description: "Salaries of NFL players for the 2024 season, scraped from Spotrac."
         columns:
           - name: NAME
             description: "Player's full name."
