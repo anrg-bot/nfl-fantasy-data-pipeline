@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: agg_consistency_score
+  - name: mrt_consistency_score
     description: "Aggregated model calculating the Consistency Score for each player."
     columns:
       - name: PLAYER_ID
@@ -23,7 +23,7 @@ models:
                 description: "Total fantasy points of player."
                 type: sum
 
-  - name: agg_red_zone_efficiency
+  - name: mrt_red_zone_efficiency
     description: "Aggregated model calculating Red Zone Efficiency for each player."
     columns:
       - name: PLAYER_ID
@@ -41,7 +41,7 @@ models:
       - name: TOTAL_TDS
         description: "Total touchdowns."
 
-  - name: agg_touchdown_rate
+  - name: mrt_touchdown_rate
     description: "Aggregated model calculating Touchdown Rate for each player."
     columns:
       - name: PLAYER_ID
@@ -49,7 +49,7 @@ models:
       - name: TOUCHDOWN_RATE
         description: "Percentage of plays (pass attempts, carries, targets) that result in a touchdown."
 
-  - name: agg_dominance_rate
+  - name: mrt_dominance_rate
     description: "Aggregated model calculating Dominance Rate for each player."
     columns:
       - name: PLAYER_ID
@@ -57,7 +57,7 @@ models:
       - name: DOMINANCE_RATE
         description: "Percentage of team's total fantasy points that a player accounts for."
 
-  - name: agg_roi
+  - name: mrt_roi
     description: "Calculates Return on Investment (ROI) for players based on total fantasy points and salary."
     columns:
       - name: PLAYER_ID
@@ -90,7 +90,7 @@ models:
       # - name: ROI
       #   description: "Return on Investment, calculated as TOTAL_FANTASY_POINTS / SALARY. A higher value indicates better ROI."
 
-  - name: agg_season_schedule
+  - name: mrt_season_schedule
     description: "Aggregated metrics for season and schedule information."
     columns:
       - name: regular_season_weeks
@@ -100,7 +100,7 @@ models:
       - name: total_games
         description: "Total number of games in the season."
         
-  - name: agg_player_experience
+  - name: mrt_player_experience
     description: "Aggregated data for player experience distribution."
     columns:
       - name: experience_level
@@ -108,7 +108,7 @@ models:
       - name: player_count
         description: "Number of players in each experience level category."
   
-  - name: agg_top_players_stats
+  - name: mrt_top_players_stats
     description: "Ranks players by total fantasy points for each position and week/season"
     columns:
       - name: PLAYER_ID
