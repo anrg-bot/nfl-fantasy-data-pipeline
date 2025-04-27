@@ -10,13 +10,13 @@ models:
   #   #       - unique
 
   - name: stg_injury_data
-    description: "Staging model for injury data."
+    description: "Staging model for NFL injury data."
     columns:
       - name: PLAYER_ID
         tests:
           - not_null
 
-  - name: stg_player_by_player_data
+  - name: stg_play_by_play_data
     description: "Staging model for play-by-play data."
     columns:
       - name: GAME_ID
@@ -24,7 +24,7 @@ models:
           - not_null
 
   - name: stg_player_stats
-    description: "Staging model for player stats."
+    description: "Staging model for weekly player statistics."
     columns:
       - name: PLAYER_ID
         tests:
@@ -34,7 +34,7 @@ models:
           - not_null
 
   - name: stg_schedules
-    description: "Staging model for schedules."
+    description: "Staging model for NFL game schedules."
     columns:
       - name: GAME_ID
         tests:
@@ -42,7 +42,7 @@ models:
           - unique
 
   - name: stg_seasonal_data
-    description: "Staging model for seasonal data."
+    description: "Staging model for seasonal aggregated player data."
     columns:
       - name: PLAYER_ID
         tests:
@@ -52,7 +52,7 @@ models:
           - not_null
 
   - name: stg_seasonal_rosters
-    description: "Staging model for seasonal rosters."
+    description: "Staging model for NFL rosters."
     columns:
       - name: PLAYER_ID
         tests:
@@ -65,3 +65,10 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: stg_historical_data
+    description: "Staging model for aggregated NFL player data from 2020-2024."
+    columns:
+      - name: PLAYER_ID
+        tests:
+          - not_null
