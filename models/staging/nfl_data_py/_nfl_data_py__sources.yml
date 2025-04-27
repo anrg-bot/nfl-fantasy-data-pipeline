@@ -43,7 +43,7 @@ sources:
           - name: DEF_SACKS
             description: "Total sacks by the player (if defensive)."
 
-      - name: INJURY_DATA
+      - name: INJURIES
         description: "Contains injury data for NFL players."
         columns:
           - name: SEASON
@@ -63,7 +63,7 @@ sources:
           - name: DATE_MODIFIED
             description: "Date the injury report was modified."
 
-      - name: PLAYER_BY_PLAYER_DATA
+      - name: PLAY_BY_PLAY
         description: "Play-by-play data for NFL games."
         columns:
           - name: GAME_ID

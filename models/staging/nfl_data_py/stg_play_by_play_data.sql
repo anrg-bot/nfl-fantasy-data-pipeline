@@ -17,7 +17,7 @@ WITH pbp_data AS (
         FANTASY_PLAYER_ID,
         FANTASY_PLAYER_NAME
     FROM
-        {{ source('nfl_data_py', 'PLAYER_BY_PLAYER_DATA') }}
+        {{ source('nfl_data_py', 'PLAY_BY_PLAY') }}
 )
 SELECT
     *
