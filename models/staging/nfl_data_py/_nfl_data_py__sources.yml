@@ -99,7 +99,7 @@ sources:
           - name: FANTASY_PLAYER_NAME
             description: "Player Name for fantasy purposes."
 
-      - name: PLAYER_STATS
+      - name: WEEKLY_PLAYER_STATS
         description: "Weekly player statistics."
         columns:
           - name: PLAYER_ID
@@ -207,7 +207,7 @@ sources:
             tests:
               - not_null
 
-      - name: SEASONAL_ROSTERS
+      - name: ROSTERS
         description: "Seasonal rosters for NFL teams."
         columns:
           - name: SEASON
