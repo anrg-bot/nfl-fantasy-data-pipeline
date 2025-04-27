@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: nfl_data_py
-    database: RAMYASHREESHETTY85PLR_ANALYTICS
-    schema: STAGING
+    database: NFL_DATA_LAB
+    schema: RAW_NFL
     tables:
       - name: DRAFT_DATA
         description: "Contains draft data for NFL players."
@@ -113,7 +113,7 @@ sources:
           - name: WEEK
             description: "The week of the season."
           - name: RECENT_TEAM
-            description: "Player' team."
+            description: "Player's team."
           - name: OPPONENT_TEAM
             description: "Opponent team."
           - name: COMPLETIONS
@@ -240,3 +240,55 @@ sources:
             description: "Team conference."
           - name: TEAM_DIVISION
             description: "Team division."
+
+      - name: HISTORICAL_DATA
+        description: "Aggregated NFL player data from 2020-2024."
+        columns:
+          - name: PLAYER_ID
+            description: "Unique identifier for the player."
+          - name: PLAYER_NAME
+            description: "Name of player."
+          - name: RECENT_TEAM
+            description: "Player's team."
+          - name: SEASON
+            description: "The season year."
+          - name: WEEK
+            description: "The week of the game."
+          - name: POSITION
+            description: "The position of the player."
+          - name: COMPLETIONS
+            description: "Pass completions."
+          - name: ATTEMPTS
+            description: "Pass attempts."
+          - name: PASSING_YARDS
+            description: "Passing yards."
+          - name: PASSING_TDS
+            description: "Passing touchdowns."
+          - name: INTERCEPTIONS
+            description: "Interceptions thrown."
+          - name: SACKS
+            description: "Sacks taken."
+          - name: CARRIES
+            description: "Rushing attempts."
+          - name: RUSHING_YARDS
+            description: "Rushing yards."
+          - name: RUSHING_TDS
+            description: "Rushing touchdowns."
+          - name: RUSHING_FIRST_DOWNS
+            description: "Rushing first downs."
+          - name: RECEPTIONS
+            description: "Receptions."
+          - name: TARGETS
+            description: "Targets."
+          - name: RECEIVING_YARDS
+            description: "Receiving yards."
+          - name: RECEIVING_TDS
+            description: "Receiving touchdowns."
+          - name: RECEIVING_FIRST_DOWNS
+            description: "Receiving first downs."
+          - name: FANTASY_POINTS
+            description: "Fantasy points scored."
+          - name: FANTASY_POINTS_PPR
+            description: "Fantasy points scored (points-per-reception)."
+            tests:
+              - not_null
