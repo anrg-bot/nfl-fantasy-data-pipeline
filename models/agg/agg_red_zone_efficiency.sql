@@ -11,7 +11,7 @@ WITH red_zone_efficiency AS (
             ELSE SUM(RED_ZONE_TDS) * 1.0 / SUM(RED_ZONE_TARGETS)
         END AS RED_ZONE_EFFICIENCY
     FROM {{ ref('dim_players') }} p
-    JOIN {{ ref('fact_red_zone') }} s ON p.PLAYER_ID = s.PLAYER_ID
+    JOIN {{ ref('fct_red_zone') }} s ON p.PLAYER_ID = s.PLAYER_ID
     GROUP BY
         1, 2, 3, 4
 )
