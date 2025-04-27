@@ -22,7 +22,7 @@ WITH player_stats AS (
         RECEIVING_TDS,
         FANTASY_POINTS
     FROM
-        {{ source('nfl_data_py', 'PLAYER_STATS') }}
+        {{ source('nfl_data_py', 'WEEKLY_PLAYER_STATS') }}
 )
 SELECT
     *

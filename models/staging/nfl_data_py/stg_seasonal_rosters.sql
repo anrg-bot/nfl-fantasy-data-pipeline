@@ -8,7 +8,7 @@ WITH seasonal_rosters AS (
         YEARS_EXP,
         AGE
     FROM
-        {{ source('nfl_data_py', 'SEASONAL_ROSTERS') }}
+        {{ source('nfl_data_py', 'ROSTERS') }}
 )
 SELECT
     *

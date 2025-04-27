@@ -9,7 +9,7 @@ WITH injury_data AS (
         REPORT_STATUS,
         DATE_MODIFIED
     FROM
-        {{ source('nfl_data_py', 'INJURY_DATA') }}
+        {{ source('nfl_data_py', 'INJURIES') }}
 )
 SELECT
     *
