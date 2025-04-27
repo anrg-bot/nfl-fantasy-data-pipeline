@@ -3,8 +3,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 def extract_salary_data(url):
-
-    response = requests.get(url)
+    headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    response = requests.get(url, headers=headers)
     response.raise_for_status()
     soup = BeautifulSoup(response.content, "html.parser")
 
@@ -38,7 +40,7 @@ def extract_salary_data(url):
 
 
 if __name__ == "__main__":
-    url = "https://www.spotrac.com/nfl/rankings/player/_/year/2023/sort/cap_base"
+    url = "https://www.spotrac.com/nfl/rankings/player/_/year/2024/sort/cap_base"
     salary_data = extract_salary_data(url)
 
     if salary_data:
@@ -46,7 +48,7 @@ if __name__ == "__main__":
         print(df)  # Print the DataFrame
 
         # Store DataFrame to CSV
-        csv_filename = "nfl_salaries_2023.csv"
+        csv_filename = "nfl_salaries_2024.csv"
         df.to_csv(csv_filename, index=False)  # Set index=False to avoid writing row indices
         print(f"Data saved to {csv_filename}")
     else:

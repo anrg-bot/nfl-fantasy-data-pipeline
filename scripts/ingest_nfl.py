@@ -1,8 +1,8 @@
 import nfl_data_py as nfl
 import pandas as pd
 
-# Fetch data for the 2023 season
-years = [2023]
+# Fetch data for the 2024 season
+years = [2024]
 
 # Load datasets
 pbp_data = nfl.import_pbp_data(years)  # Play-by-play data
@@ -14,10 +14,10 @@ draft_data = nfl.import_draft_picks(years)
 seasonal_data = nfl.import_seasonal_data(years)
 
 # Save data to CSV (for loading into Snowflake)
-pbp_data.to_csv("pbp_data_2023.csv", index=False)
-player_stats.to_csv("player_stats_2023.csv", index=False)
-rosters.to_csv("rosters_2023.csv", index=False)
-schedules.to_csv("schedules_2023.csv", index=False)
-injury_data.to_csv("injury_data_2023.csv", index=False)
-draft_data.to_csv("draft_data_2023.csv", index=False)
-seasonal_data.to_csv("seasonal_data_2023.csv", index=False)
+pbp_data.to_csv("pbp_data_2024.csv", index=False)
+player_stats.to_csv("player_stats_2024.csv", index=False)
+rosters.to_csv("rosters_2024.csv", index=False)
+schedules.to_csv("schedules_2024.csv", index=False)
+injury_data.to_csv("injury_data_2024.csv", index=False)
+draft_data.to_csv("draft_data_2024.csv", index=False)
+seasonal_data.to_csv("seasonal_data_2024.csv", index=False)
