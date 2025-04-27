@@ -6,7 +6,7 @@ WITH red_zone AS (
         SUM(CASE WHEN YARDLINE_100 <= 20 AND PLAY_TYPE = 'pass' THEN 1 ELSE 0 END) AS RED_ZONE_TARGETS,
         SUM(CASE WHEN YARDLINE_100 <= 20 AND PLAY_TYPE = 'pass' AND TOUCHDOWN = 1 THEN 1 ELSE 0 END) AS RED_ZONE_TDS
     FROM
-        {{ ref('stg_player_by_player_data') }}
+        {{ ref('stg_play_by_play_data') }}
     GROUP BY
         1, 2, 3
 )

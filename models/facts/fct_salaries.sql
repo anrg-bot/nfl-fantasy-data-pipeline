@@ -4,7 +4,7 @@ WITH salaries AS (
         s.TEAM,
         s.SALARY
     FROM
-        {{ ref('stg_nfl_salaries_2023') }} s
+        {{ ref('stg_nfl_salaries_2024') }} s
     JOIN
         {{ ref('dim_players') }} p
     ON
