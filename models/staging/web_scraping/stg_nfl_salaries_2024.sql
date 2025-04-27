@@ -5,6 +5,8 @@ WITH nfl_salaries AS (
         SALARY
     FROM
         {{ source('web_scraping', 'SALARIES_2024') }}
+        
+    WHERE TEAM IS NULL
 )
 SELECT
     *
