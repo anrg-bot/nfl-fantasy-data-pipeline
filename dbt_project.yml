@@ -20,14 +20,8 @@ models:
     +materialized: view
     +schema: STAGING
   core:
-    dimensions:
-      +schema: CORE
-      +materialized: table
-    facts:
-      +schema: CORE
-      +materialized: table
+    +schema: CORE
+    +materialized: table
   marts:
-    +schema: INSIGHTS
-    +materialized: view
-
+    +materialized: table
 
