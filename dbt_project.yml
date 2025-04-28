@@ -1,4 +1,4 @@
-name: "fantasy_football"
+name: "gridiron_data_lab"
 version: "1.0.0"
 config-version: 2
 
@@ -16,7 +16,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  fantasy_football:
+  gridiron_data_lab:
     staging:
       +materialized: view
       +schema: STAGING
