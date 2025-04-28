@@ -16,12 +16,13 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  staging:
-    +materialized: view
-    +schema: STAGING
-  core:
-    +schema: CORE
-    +materialized: table
-  marts:
-    +materialized: table
+  fantasy_football:
+    staging:
+      +materialized: view
+      +schema: STAGING
+    core:
+      +schema: CORE
+      +materialized: table
+    marts:
+      +materialized: table
 
