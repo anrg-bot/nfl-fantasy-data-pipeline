@@ -1,4 +1,5 @@
 SELECT
+    POSITION,
     CASE
         WHEN YEARS_EXP = 0 THEN 'Rookie'
         WHEN YEARS_EXP BETWEEN 1 AND 2 THEN '1-2 Years'
@@ -7,5 +8,4 @@ SELECT
     END AS experience_level,
     COUNT(*) AS player_count
 FROM {{ ref('stg_seasonal_rosters') }}
-GROUP BY 1
-ORDER BY 1  
+GROUP BY 1, 2
