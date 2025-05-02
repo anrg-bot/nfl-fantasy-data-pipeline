@@ -77,8 +77,10 @@ Breakdown of total salary by position—**QBs consumed 39%** of team payroll, ma
 
 ## Related Links
 
-- [My Medium Article](#) *(https://medium.com/@macha.anrg/from-the-field-to-the-dashboard-engineering-fantasy-football-analytics-5560ff5ddd65)* 
+- [My Medium Article](https://medium.com/@macha.anrg/from-the-field-to-the-dashboard-engineering-fantasy-football-analytics-5560ff5ddd65)
 - [dbt Model Repo](https://github.com/anrg-bot/nfl-fantasy-data-pipeline)
 - [NFL Data Source - `nfl_data_py`](https://nfl-data-py.readthedocs.io/)
+- [Download Power BI Dashboard (.pbix)](reports/dashboard.pbix)
+
 
 Thanks for checking out this project! Whether you're optimizing lineups or building data pipelines, **smart value wins games**—in fantasy and in code.
